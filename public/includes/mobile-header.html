@@ -1,0 +1,50 @@
+<header class="header-mobile">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <div class="container">
+        <div class="mobile-header-content">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="imagenes/Logo_campana2.webp" alt="Moovo Logo" class="logo-img" />
+            </a>
+            
+            <!-- Iconos de acción -->
+            <div class="mobile-actions">
+                <div class="search-icon" onclick="openSearchModal()">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cart-icon" onclick="window.location.href='car.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="user-avatar" onclick="window.location.href='login.html'">
+                    <i class="fas fa-user"></i>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil desplegable -->
+        <nav class="nav-mobile" id="mobileNav">
+            <a href="multimedia.html" class="nav-link-mobile">Multimedia</a>
+            <a href="medios_fisicos.html" class="nav-link-mobile">Medios Físicos</a>
+            <a href="tienda.html" class="nav-link-mobile">Tienda</a>
+            <a href="nosotros.html" class="nav-link-mobile">Nosotros</a>
+            
+            <div class="mobile-user-info">
+                <span id="user-name-mobile" class="user-name-mobile"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Search Modal -->
+<div class="search-modal" id="searchModal">
+    <div class="search-container">
+        <button class="search-close" onclick="closeSearchModal()">&times;</button>
+        <input type="text" class="search-input" placeholder="¿Qué estás buscando?" id="searchInput" oninput="handleSearch(this.value)">
+        <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+</div>

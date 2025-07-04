@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia - Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+   <div class="titulo-hero">   
+            <h1 class="hero-title-m">Tu basura <span style="color: cyan;">siempre</span><br> encuentra el camino <br> de regreso</h1>
+            <p class="hero-title-text"><br><br>Cuando botas tu basura en la calle o en el rio,<br> ¿crees que el problema terminó ahí?</p>
+            <p class="hero-title-text"><br>En realidad no, siempre vuelve a ti.<br><span style="color: orange;">Probablemente esté justo en tu comida</span> </p>
+        </div>
+        
+        <section class="multimedia-hero">
+            <video id="hero-video" class="hero-video" muted>
+                <source src="videos/Loquetirasregresaprincipal.mp4" type="video/mp4">
+                
+            </video>
+            <div class="hero-video-overlay" id="hero-video-overlay">
+                <div class="hero-play-button" id="hero-play-btn"></div>
+                </div>
+            </div>
+        </section>
+
+         <section class="radio-section">
+            <div class="jingles-title">Jingles</div>
+            <div class="jingles-subtitle">Para la radio.</div>
+            
+            <div class="container">
+                <div class="radio-players-container">
+                    <!-- Player 1 -->
+                    <div class="radio-player">
+                        <div class="radio-card-icon" id="radio-icon-1">
+                            <i class="fa-solid fa-broadcast-tower"></i>
+                        </div>
+                        <div class="radio-description">
+                            <span class="number">1.</span>
+                            <p>Recuerda todo lo que tiras te acompañará por años, <span class="highlight">incluso más que tu trabajo.</span><br>
+                            Por eso cuando tires una botella, no solo contaminas el ambiente si no a ti mismo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Player 2 -->
+                    <div class="radio-player">
+                        <div class="radio-card-icon" id="radio-icon-2">
+                            <i class="fa-solid fa-broadcast-tower"></i>
+                        </div>
+                        <div class="radio-description">
+                            <span class="number">2.</span>
+                            <p> Recuerda todo lo que tiras te acompañará por años, <span class="highlight">incluso más que tu trabajo.</span><br>
+                            Por eso cuando tires una botella, no solo contaminas el ambiente si no a ti mismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Elements -->
+            <audio id="radio-audio-1" src="audios/Audio1.mp3"></audio>
+            <audio id="radio-audio-2" src="audios/Audio2.mp3"></audio>
+        </section>
+
+        <section class="video-carousel-section">
+            
+                <div class="video-carousel-container">
+                    <!-- Navigation Arrow Left -->
+                    <button class="carousel-nav carousel-nav-left" id="prev-btn">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <!-- Video Container -->
+                    <div class="video-container">
+                        <div class="video-slide active" data-video="1">
+                            <video id="video-1" muted>
+                                <source src="videos/Loquetirasregresa1.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="play-button" id="play-btn-1">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-slide" data-video="2">
+                            <video id="video-2" muted>
+                                <source src="videos/Loquetirasregresa2.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                            <div class="video-overlay">
+                                <div class="play-button" id="play-btn-2">
+                                    <i class="fa-solid fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Panel -->
+                    <div class="content-panel">
+                        <div class="content-slide active" data-content="1">
+                            <h2>¿Te gustaría ser <br> parte del<span style="color: cyan;">  cambio</span>?</h2>
+                            <div class="action-section">
+                                <h3 class="action-title">Podemos empezar cambiando pequeñas acciones.</h3>
+                                <p class="action-text">Deja tu mensaje que te gustaría que todos escuchen.</p>
+                                <p class="action-text">Escribe una acción que quisieras mostrar que contamina.</p>
+                            </div>
+                        </div>
+
+                        <div class="content-slide" data-content="2">
+                            <h2>Segundo paso del <br><span style="color: cyan;">cambio</span></h2>
+                            <div class="action-section">
+                                <h3 class="action-title">Inspira a otros con tu ejemplo.</h3>
+                                <p class="action-text">Comparte tu experiencia y motiva a más personas.</p>
+                                <p class="action-text">Documenta tu progreso y celebra cada logro.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrow Right -->
+                    <button class="carousel-nav carousel-nav-right" id="next-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            
+        </section>
+
+        <section class="instagram-section">
+            <div class="container">
+                <h2 class="section-title-i">Instagram</h2>
+                <h4 class="section-title-m">@loque_tirasregresa</h4>
+                <button class="btn-primary-i">Visitar</button>
+                <div class="instagram-grid">
+                    <div class="instagram-item instagram-post1"></div>
+                    <div class="instagram-item instagram-post2"></div>
+                    <div class="instagram-item instagram-post3"></div>
+                    <div class="instagram-item instagram-post4"></div>
+                </div>
+                <div class="instagram-grid">
+                    <div class="instagram-item instagram-post5"></div>
+                    <div class="instagram-item instagram-post6"></div>
+                    <div class="instagram-item instagram-post7"></div>
+                    <div class="instagram-item instagram-post8"></div>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="Scripts/main.js" type="module"></script>
+    <script>
+        // Player 1 functionality
+        const radioIcon1 = document.getElementById('radio-icon-1');
+        const audio1 = document.getElementById('radio-audio-1');
+        let isPlaying1 = false;
+
+        radioIcon1.addEventListener('click', () => {
+            // Stop other audio if playing
+            if (isPlaying2) {
+                audio2.pause();
+            }
+            
+            if (isPlaying1) {
+                audio1.pause();
+            } else {
+                audio1.play();
+            }
+        });
+
+        audio1.addEventListener('play', () => {
+            isPlaying1 = true;
+            radioIcon1.classList.add('playing');
+        });
+
+        audio1.addEventListener('pause', () => {
+            isPlaying1 = false;
+            radioIcon1.classList.remove('playing');
+        });
+
+        // Player 2 functionality
+        const radioIcon2 = document.getElementById('radio-icon-2');
+        const audio2 = document.getElementById('radio-audio-2');
+        let isPlaying2 = false;
+
+        radioIcon2.addEventListener('click', () => {
+            // Stop other audio if playing
+            if (isPlaying1) {
+                audio1.pause();
+            }
+            
+            if (isPlaying2) {
+                audio2.pause();
+            } else {
+                audio2.play();
+            }
+        });
+
+        audio2.addEventListener('play', () => {
+            isPlaying2 = true;
+            radioIcon2.classList.add('playing');
+        });
+
+        audio2.addEventListener('pause', () => {
+            isPlaying2 = false;
+            radioIcon2.classList.remove('playing');
+        });
+
+        // Video Carousel Functionality
+        let currentSlide = 1;
+        const totalSlides = 2;
+
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+
+        function showSlide(slideNumber) {
+            // Hide all slides
+            document.querySelectorAll('.video-slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+            document.querySelectorAll('.content-slide').forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show current slide
+            document.querySelector(`.video-slide[data-video="${slideNumber}"]`).classList.add('active');
+            document.querySelector(`.content-slide[data-content="${slideNumber}"]`).classList.add('active');
+
+            // Pause all videos
+            document.querySelectorAll('video').forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // Reset all play buttons
+            document.querySelectorAll('.play-button').forEach(btn => {
+                btn.classList.remove('playing');
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            });
+
+            // Reset video overlays
+            document.querySelectorAll('.video-overlay').forEach(overlay => {
+                overlay.classList.remove('playing');
+            });
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentSlide = currentSlide === totalSlides ? 1 : currentSlide + 1;
+            showSlide(currentSlide);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentSlide = currentSlide === 1 ? totalSlides : currentSlide - 1;
+            showSlide(currentSlide);
+        });
+
+        // Video play functionality
+        function setupVideoPlayer(videoId, playBtnId) {
+            const video = document.getElementById(videoId);
+            const playBtn = document.getElementById(playBtnId);
+            const overlay = playBtn.parentElement;
+
+            playBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playBtn.classList.add('playing');
+                    overlay.classList.add('playing');
+                } else {
+                    video.pause();
+                    playBtn.classList.remove('playing');
+                    overlay.classList.remove('playing');
+                }
+            });
+
+            video.addEventListener('play', () => {
+                playBtn.classList.add('playing');
+                overlay.classList.add('playing');
+            });
+
+            video.addEventListener('pause', () => {
+                playBtn.classList.remove('playing');
+                overlay.classList.remove('playing');
+            });
+
+            video.addEventListener('ended', () => {
+                playBtn.classList.remove('playing');
+                overlay.classList.remove('playing');
+                playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            });
+        }
+
+        // Initialize video players
+        setupVideoPlayer('video-1', 'play-btn-1');
+        setupVideoPlayer('video-2', 'play-btn-2');
+
+        // Initialize first slide
+        showSlide(1);
+        // Hero video functionality
+        const heroVideo = document.getElementById('hero-video');
+        const heroPlayBtn = document.getElementById('hero-play-btn');
+        const heroVideoOverlay = document.getElementById('hero-video-overlay');
+
+        heroPlayBtn.addEventListener('click', () => {
+            if (heroVideo.paused) {
+                heroVideo.play();
+                heroPlayBtn.classList.add('playing');
+                heroVideoOverlay.classList.add('playing');
+                heroPlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            } else {
+                heroVideo.pause();
+                heroPlayBtn.classList.remove('playing');
+                heroVideoOverlay.classList.remove('playing');
+                heroPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            }
+        });
+
+        heroVideo.addEventListener('play', () => {
+            heroPlayBtn.classList.add('playing');
+            heroVideoOverlay.classList.add('playing');
+            heroPlayBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        });
+
+        heroVideo.addEventListener('pause', () => {
+            heroPlayBtn.classList.remove('playing');
+            heroVideoOverlay.classList.remove('playing');
+            heroPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        });
+
+        heroVideo.addEventListener('ended', () => {
+            heroPlayBtn.classList.remove('playing');
+            heroVideoOverlay.classList.remove('playing');
+            heroPlayBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        });
+
+        // Click anywhere on the hero section to play/pause
+        document.querySelector('.multimedia-hero').addEventListener('click', (e) => {
+            // Don't trigger if clicking on the play button itself
+            if (!e.target.closest('.hero-play-button')) {
+                if (heroVideo.paused) {
+                    heroVideo.play();
+                } else {
+                    heroVideo.pause();
+                }
+            }
+        });
+    </script>
+
+    </body>
+</html>

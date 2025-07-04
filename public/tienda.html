@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+</head>
+<body>
+ <div id="header-placeholder"></div>
+<!-- Firebase SDKs para app y Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+
+    <main>
+        <div class="titulo-hero">   
+                    
+                </div>
+        <section class="herot">   
+            <div class="container-hero">
+            
+    
+            </div>
+        </section>
+
+        <section class="store-section-red" id="lo-mas-pedido">
+            <div class="container">
+                <h2 class="section-title-red">Lo más pedido</h2>
+                <div class="store-carousel-tienda">
+                    <div class="products-container" id="loMasPedidoContainer">
+                        </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="store-section" id="camisetas">
+            <div class="container">
+                <h2 class="section-title">Indumentaria</h2>
+                <div class="store-carousel-tienda">
+                   
+                    <div class="products-container" id="camisetasContainer">
+                        </div>
+                
+                </div>
+                
+            </div>
+        </section>
+        <section class="products-grid">
+            <section class="product-carousel-section" id="pines">
+            <div class="container">
+                <h2 class="section-title">Pines</h2>
+                <div class="store-grid-tienda">
+               
+                    <div class="products-container-grid" id="pinesContainer">
+                        </div>
+              
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="product-carousel-section" id="stickers">
+            <div class="container">
+                <h2 class="section-title">Stickers</h2>
+                <div class="store-grid-tienda">
+                 
+                    <div class="products-container-grid" id="stickersContainer">
+                        </div>
+
+                </div>
+                
+            </div>
+        </section>
+        </section>
+        
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/tienda.js"></script> 
+</body>
+</html>

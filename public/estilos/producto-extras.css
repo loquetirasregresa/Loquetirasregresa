@@ -1,0 +1,148 @@
+/* ====================================
+   ESTILOS PARA MENSAJE DE ÉXITO
+   ==================================== */
+
+.mensaje-exito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transform: translateX(400px);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.mensaje-exito.mostrar {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.mensaje-exito .icono {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mensaje-exito .cerrar {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.mensaje-exito .cerrar:hover {
+  opacity: 1;
+}
+
+/* ====================================
+   ESTILOS PARA SELECTOR DE MONEDA
+   ==================================== */
+.selector-moneda-precio-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el selector y el precio */
+  margin: 20px 0;
+  flex-wrap: wrap; /* En pantallas pequeñas permite que se acomode mejor */
+}
+
+.selector-moneda {
+  display: flex;
+  align-items: center;
+}
+
+.selector-moneda select {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* ====================================
+   ANIMACIONES
+   ==================================== */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}
+
+/* ====================================
+   RESPONSIVO
+   ==================================== */
+
+@media (max-width: 768px) {
+  .selector-moneda {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .selector-moneda select {
+    font-size: 12px;
+  }
+  
+  .mensaje-exito {
+    top: 10px;
+    right: 10px;
+    padding: 12px 16px;
+    font-size: 13px;
+    max-width: calc(100vw - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .selector-moneda {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 10px;
+    width: fit-content;
+  }
+  
+  .mensaje-exito {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    max-width: 90vw;
+  }
+  
+  .mensaje-exito.mostrar {
+    transform: translate(-50%, -50%);
+  }
+}

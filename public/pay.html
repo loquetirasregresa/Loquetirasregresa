@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago - Loque tiras regresa </title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <h3>Procesando tu pedido...</h3>
+            <p>Por favor espera un momento</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="checkout-container">
+        <!-- Main Checkout Form -->
+        <div class="checkout-main">
+            <h1 class="page-title">Método de pago</h1>
+
+            <!-- Usuario -->
+            <div class="user-info">
+                <strong>Usuario:</strong> <span id="user-name"></span>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="success-message">
+                <i class="fas fa-check-circle" style="font-size: 1.5rem; margin-right: 10px;"></i>
+                ¡Pedido procesado exitosamente! Recibirás un email de confirmación.
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="section-title">Tarjetas con las que puedes realizar tu pago:</div>
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="diners">
+                    <div class="payment-icon diners">dt</div>
+                    <div class="payment-dot"></div>
+                </div>
+                <div class="payment-method" data-method="visa">
+                    <div class="payment-icon visa">VISA</div>
+                    <div class="payment-dot"></div>
+                </div>
+                <div class="payment-method" data-method="mastercard">
+                    <div class="payment-icon mastercard">MC</div>
+                    <div class="payment-dot"></div>
+                </div>
+                <div class="payment-method" data-method="paypal">
+                    <div class="payment-icon paypal">PayPal</div>
+                    <div class="payment-dot"></div>
+                </div>
+            </div>
+
+            <!-- Shipping Options -->
+            <div class="shipping-section">
+                <div class="section-title">Método de envío:</div>
+                <div class="shipping-options">
+                    <div class="shipping-option active" data-shipping="standard" data-price="1.00">
+                        <div class="shipping-info">
+                            <div class="shipping-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="shipping-details">
+                                <h4>Envío Estándar</h4>
+                                <p>Entrega en 3-5 días hábiles</p>
+                            </div>
+                        </div>
+                        <div class="shipping-price">$1.00</div>
+                    </div>
+                    <div class="shipping-option" data-shipping="express" data-price="5.00">
+                        <div class="shipping-info">
+                            <div class="shipping-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="shipping-details">
+                                <h4>Envío Express</h4>
+                                <p>Entrega en 1-2 días hábiles</p>
+                            </div>
+                        </div>
+                        <div class="shipping-price">$5.00</div>
+                    </div>
+                    <div class="shipping-option" data-shipping="pickup" data-price="0.00">
+                        <div class="shipping-info">
+                            <div class="shipping-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="shipping-details">
+                                <h4>Recoger en Tienda</h4>
+                                <p>Disponible en 24 horas</p>
+                            </div>
+                        </div>
+                        <div class="shipping-price">Gratis</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Form -->
+            <form id="payment-form-alt" class="payment-form-alt">
+                <div class="section-title">Datos de pago</div>
+                
+                <div class="form-group full-width">
+                    <label class="form-label" for="card-number">Número de tarjeta</label>
+                    <input type="text" id="card-number" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="cvv">Código de seguridad</label>
+                        <input type="text" id="cvv" class="form-input" placeholder="123" maxlength="4" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="cvv2">Repetir código</label>
+                        <input type="text" id="cvv2" class="form-input" placeholder="123" maxlength="4" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Fecha de vencimiento</label>
+                    <div class="form-row">
+                        <select class="form-select" required>
+                            <option value="">Año</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                        <select class="form-select" required>
+                            <option value="">Mes</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label class="form-label">Nombre del titular</label>
+                    <input type="text" class="form-input" placeholder="Juan Pérez" required />
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="save-data-alt" />
+                    <label for="save-data-alt">Guardar datos de pago</label>
+                </div>
+
+                <button type="submit" class="confirm-btn">
+                    Confirmar el pago
+                </button>
+                <button type="submit" class="cancel-btn" onclick="window.location.href='index.html'; return false;">
+                    Cancelar el pago
+                </button>
+            </form>
+
+            <!-- Security Note -->
+            <div class="security-note">
+                Todas las transacciones se procesan en forma segura mediante plataformas certificadas. El importe se cargará en el momento de confirmar el pedido. Podemos solicitar verificación de identidad para prevenir fraudes. Los reembolsos solo se realizarán a la misma tarjeta utilizada, conforme a nuestra política de devoluciones.
+            </div>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="checkout-sidebar">
+            <div class="order-summary">
+                <div class="summary-title">Subtotal</div>
+                <div id="order-items">
+                    <!-- Items will be loaded here -->
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-item">
+                    <span>Subtotal de artículos</span>
+                    <span id="items-subtotal">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Descuentos de artículos</span>
+                    <span id="discount-amount">$0.70</span>
+                </div>
+            </div>
+
+            <div class="price-summary">
+                <div class="price-title">Precio a pagar</div>
+                <div class="summary-item">
+                    <span>Total de artículos</span>
+                    <span id="final-total">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Envío</span>
+                    <span id="shipping-cost">$1.00</span>
+                </div>
+                <div class="total-price" id="grand-total">$0.00</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Tu JS modular -->
+    <script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/buy.js" type="module"></script>
+</body>
+</html>

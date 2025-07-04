@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medios - Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+    <link rel="stylesheet" href="estilos/estiloscarousel.css">
+</head>
+<body>
+ <div id="header-placeholder"></div>
+<!-- Firebase SDKs para app y Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+
+    <main>
+        <div class="titulo-hero">   
+                </div>
+        <section class="herof">   
+            <div class="container-hero">
+                <div class="hero-dots">
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </section>
+        <h1 class="h1f" >Medios físicos</h1>
+        <section class="cards-section2">
+            <div class="cards2">
+                <div class="card-container">
+                    <div class="card2 Fisico-Periodico"></div>
+                    <h3 class="card-text">Periódico - La Hora</h3>
+                </div>
+                
+                <div class="card-container">
+                    <div class="card2 Fisico-Publicidad"></div>
+                    <h3 class="card-text">Publicidad en buses</h3>
+                </div>
+                
+                <div class="card-container">
+                    <div class="card2 Fisico-Mupi"></div>
+                    <h3 class="card-text">Mupi - Mall de los Andes</h3>
+                </div>
+            </div>
+        </section>
+
+       <section class="vallas-section">
+        <ul class="list">
+            <li class="prev-far"></li>
+            <li class="prev"></li>
+            <li class="act"></li>
+            <li class="next"></li>
+            <li class="next-far"></li>
+        </ul>
+        <div class="swipe"></div>
+        
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
+            <div class="indicator" data-index="3"></div>
+            <div class="indicator" data-index="4"></div>
+        </div>
+    </section>
+
+        <!-- Sección de Video -->
+<section class="video-section">
+    <div class="video-container">
+        <!-- Imagen con botón de reproducir -->
+        <div class="video-image-container" onclick="playLocalVideo()">
+            <img src="imagenes/8k_campaña_3D.webp" alt="Video de Vallas Publicitarias" class="video-image">
+            <div class="video-overlay">
+                <div class="play-button">
+                    <div class="play-icon"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido de texto -->
+        <div class="video-content">
+            <h2 class="video-title">BTL</h2>
+            <p class="video-description" style="line-height: 1.1;">
+La propuesta gira en torno a un dispensador de agua intervenido, cuyo botellón está dividido en dos: un lado contiene agua limpia y el otro, agua contaminada con desechos. Esta dualidad representa la contradicción de nuestras decisiones diarias y refuerza el mensaje<br>
+<strong style="color: #61c2df; ">"¡Qué irónico! Contaminas lo que bebes.</strong> 
+            </p>
+            <h3 style="color: #61c2df; text-align: left;"><strong>Ubicación</strong></h3>
+            <p style="line-height: 1.1;">Espacios públicos muy concurridos de Ambato, como el <br>
+            Parque montalvo, Parque de las Flores, Parque de los <br>Quindes y el Paseo Ecológico</p>
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/carousel_vallas.js"></script>
+
+</body>
+</html>

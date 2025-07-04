@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+</head>
+
+<body>
+<!-- Firebase SDKs para app y Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+
+    <!-- Header -->
+<div id="header-placeholder"></div>
+  
+     <div class="titulo-hero">   
+            <h1 class="hero-title">Todo lo que hagas<br> tiene un efecto</h1>
+        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+  <div class="hero-carousel">
+    <div class="hero-slide">
+      <img class="hero-bg active" src="imagenes/BANNERS_WEB-04.webp" alt="Banner 1">
+    </div>
+    <div class="hero-slide">
+      <img class="hero-bg" src="imagenes/BANNERS_WEB-05.webp" alt="Banner 2">
+    </div>
+    <div class="hero-slide">
+      <img class="hero-bg" src="imagenes/BANNERS_WEB-06.webp" alt="Banner 3">
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-dots" id="heroDots">
+      <div class="dot active" data-index="0"></div>
+      <div class="dot" data-index="1"></div>
+      <div class="dot" data-index="2"></div>
+    </div>
+  </div>
+</section>
+
+    <section class="cards-section">   
+         <div class="cards">
+                <div class="card Impreso">
+                    <h4>Material impreso</h4>
+                </div>
+                
+                <div class="card BTL">
+
+                    <h3>BTL</h3>
+                </div>
+                
+                <div class="card Multimedia">
+                    <h3>Video Corto</h3>
+                </div>
+            </div>
+    </section>
+
+<!-- Nueva sección: ¿A qué nos enfrentamos? -->
+<section class="challenge-section">
+  <h2 class="section-title">¿A qué nos <span style="color: #61c2df;">enfrentamos?</span></h2>
+  <div class="challenge-carousel">
+    <div class="challenge-slides">
+      
+      <div class="challenge-slide fondo2">
+        <h2 class="challenge-title" style="color: #61c2df;">¿Podemos seguir ignorandola?</h2>
+        <div class="challenge-text text-top-left">
+          <p>Esta campaña busca dar a conocer el daño ambiental en los cuerpos de agua locales por el desecho de productos contaminantes.</p>
+        </div>
+      </div>
+      <div class="challenge-slide fondo1">
+        <h2 class="challenge-title" style="color: #61c2df;">¿De qué va esta campaña?</h2>
+    
+        <div class="challenge-text text-center">
+          <p>Esta campaña nace para despertar conciencia ambiental en los jóvenes de Ambato, mostrándoles que el cambio real empieza con lo que haces todos los días: lo que compras, lo que tiras, lo que decides ignorar... o enfrentar.<br>
+
+Nos enfocamos en los puntos más contaminados de la ciudad, no para asustarte, sino para que lo veas con tus propios ojos. Porque cuando entiendes el impacto, algo cambia por dentro.</p>
+        </div>
+      </div>
+      <div class="challenge-slide fondo3">
+        <h2 class="challenge-title" style="color: #61c2df;">Explotación</h2>
+        <div class="challenge-text text-bottom-right">
+          <p>Fomentamos la participación activa de la comunidad para reducir el impacto ambiental y crear conciencia sobre la importancia de cuidar nuestros recursos naturales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección objetivos de la campaña -->
+<section class="objectives-section">
+  <h2> Objetivos de la <span style="color: #61c2df;">campaña</span></h2>
+  <div class="objectives-container">
+
+    <div class="objective-image">
+      
+    </div>
+    <div class="objective-text">
+      <h3>Nuestro objetivo</h3>
+      <p><br>Esta campaña nace para despertar conciencia ambiental entre los jóvenes de 18 a 28 años. Queremos inspirarte a tomar decisiones más responsables frente a la contaminación que afecta a nuestra ciudad.<br>
+      Mostrándote que acciones contaminan, y que podemos hacer para aportar al cambio, por un ambiente mas limpio 
+      </p>
+     <p class="pa2"><br>Porque todo lo que tiras, <br>regresa</p>
+    </div>
+  </div>
+</section>
+
+<!-- Store Section -->
+<section id="tienda" class="store-section">
+  <div class="container">
+    <h2 >Tienda</h2>
+
+    <div class="store-carousel">
+      <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+        <span>&lt;</span>
+      </button>
+      <div class="products-container" id="productsContainer">
+        <!-- Aquí se insertarán los productos dinámicamente desde Firebase -->
+      </div>
+      <button class="carousel-btn carousel-btn-next" id="nextBtn">
+        <span>&gt;</span>
+      </button>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+<script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/carrusel.js"></script>
+    <script src="Scripts/carruselindex.js"></script>
+</body>
+</html>

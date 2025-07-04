@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+</head>
+<body>
+ <div id="header-placeholder"></div>
+<!-- Firebase SDKs para app y Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+<style>
+  body {
+    background-image: url(imagenes/Fondo-iniciar-sesion.png);
+  }
+</style>
+
+    <main>
+        <div class="login-container">
+  <div class="login-box">
+    <div class="login-form">
+      <h4>Hola, Bienvenido</h4>
+      <h3>Iniciar sesión</h3>
+
+      <form id="loginForm">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="Correo" required>
+
+        <label for="password">Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <i class="fas fa-eye toggle-password" onclick="togglePassword()"></i>
+        </div>
+
+        <a href="#" class="forgot">¿Olvidó la contraseña?</a>
+        <a href="register.html" class="forgot">Registrarse</a>
+        <button class="btn-aceptar" type="submit">Aceptar</button>
+      </form>
+    </div>
+    
+    <div class="login-image">
+      <!-- Puedes poner una imagen aquí si deseas -->
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/login.js" type="module"></script>
+</body>
+</html>

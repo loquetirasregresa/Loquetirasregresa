@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Lo que tiras regresa</title>
+    <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estilosMoovo.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+</head>
+<body>
+ <div id="header-placeholder"></div>
+<!-- Firebase SDKs para app y Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics-compat.js"></script>
+<!-- Cart Header -->
+    <section class="cart-header">
+        <div class="containerc">
+            <div class="cart-icon-large">
+  <img src="imagenes/Icono_tienda.webp" alt="Carrito de compras">
+</div>
+            <h1>Tus pedidos</h1>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-container">
+                <div class="caracteristicas">
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_pago_seguro.webp" alt="Entrega garantizada" />
+  </div>
+            <span>Opciones de pago seguro</span>
+          </div>
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_privacidad_datos.webp" alt="Privacidad de datos" />
+  </div>
+            <span>Privacidad de datos</span>
+          </div>
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_entrega_segura.webp" alt="Entrega garantizada" />
+  </div>
+            <span>Entrega garantizada</span>
+          </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading">
+        <i class="fas fa-spinner"></i>
+        <p>Cargando tu carrito...</p>
+    </div>
+
+    <!-- Cart Content -->
+    <div id="cart-content" class="cart-content" style="display: none;">
+        <div class="container">
+            <div id="cart-items"></div>
+            
+            <!-- Selected Items Info -->
+            <div class="selected-info">
+                <span id="selected-count">0 productos seleccionados</span>
+            </div>
+            
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <h2>Resumen del pedido</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>impuestos </span>
+                    <span id="shipping">$2.00</span>
+                </div>
+                <div class="summary-total">
+                    <div class="summary-row">
+                        <span>Total a pagar</span>
+                        <span class="total-amount" id="total">$0.00</span>
+                    </div>
+                </div>
+                <button class="pay-btn" onclick="procederPago()">Pagar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Empty Cart -->
+    <div id="empty-cart" class="empty-cart" style="display: none;">
+        <i class="fas fa-shopping-cart"></i>
+        <h2>Tu carrito está vacío</h2>
+        <p>Agrega algunos productos para comenzar</p>
+        <a href="tienda.html" class="continue-shopping">Continuar comprando</a>
+    </div>
+
+    <!-- Footer Note -->
+    <footer class="footer-note">
+        <div class="container">
+            <p>Todos nuestros productos están respaldados por garantía. Si recibes un pedido dañado, defectuoso o incompleto, lo reemplazamos sin costo adicional. Tienes hasta 7 días desde la entrega para reportar cualquier inconveniente. Nuestro equipo está disponible para ayudarte en todo el proceso. Tu satisfacción es nuestra prioridad.</p>
+        </div>
+    </footer>
+        
+
+    <div id="footer-placeholder"></div>
+
+    <script src="Scripts/main.js" type="module"></script>
+    <script src="Scripts/carrito.js" type="module"></script>
+</body>
+</html>

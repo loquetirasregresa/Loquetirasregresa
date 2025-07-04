@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="estilos/estilosMoovo.css">
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCgaiQDFtx2IGviiepkWODRy_D_N-3o0QA",
+      authDomain: "moovo-16a2e.firebaseapp.com",
+      projectId: "moovo-16a2e",
+      storageBucket: "moovo-16a2e.firebasestorage.app",
+      messagingSenderId: "835927562635",
+      appId: "1:835927562635:web:7c607169bb8f46ec78778e",
+      measurementId: "G-CM1SBP592Q"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      const userName = document.getElementById("user-namei");
+      const logoutBtn = document.getElementById("logout-btn");
+      
+      if (user) {
+        // Mostrar el nombre del usuario
+        userName.textContent = user.displayName || user.email || "Usuario";
+        
+        // Configurar el botón de cerrar sesión
+        if (logoutBtn) {
+          logoutBtn.addEventListener("click", () => {
+            signOut(auth).then(() => {
+              window.location.href = "index.html";
+            }).catch((error) => {
+              console.error("Error al cerrar sesión:", error);
+            });
+          });
+        }
+      } else {
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+  <style>
+
+
+    .profile-header {
+      background-image: url(imagenes/Fondo-iniciar-sesion.png);
+      height: 120px;
+      position: relative;
+      color: white;
+    }
+
+    .profile-icon {
+      width: 100px;
+      height: 100px;
+      background: #7AB55C;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translateY(0%);
+      transform: translateX(30%);
+
+      z-index: 10;
+    }
+
+    .user-namei {
+      font-size: 30px;
+      font-weight: 600;
+      position: absolute;
+      top: 60%;
+      left: 170px;
+      transform: translateY(50%);
+      transform: translateX(30%);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .content-wrapper {
+      background: white;
+      border-radius: 15px;
+      padding: 80px 30px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 40px;
+    }
+
+    .info-sections {
+      flex: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .menu-item {
+      padding: 10px 0;
+      color: #666;
+      font-size: 14px;
+      cursor: pointer;
+      transition: color 0.2s;
+      border-bottom: none;
+    }
+
+    .menu-item:hover {
+      color: #7AB55C;
+    }
+
+    .content-area {
+      flex: 1;
+      background-image: url(imagenes/Post_CAMPAÑA8.png);
+      background-size: cover;
+  
+      border-radius: 15px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+    }
+
+    #logout-btn {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(0%);
+ 
+      background-color: #e74c3c;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #logout-btn:hover {
+      background-color: #c0392b;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 20px 20px;
+      }
+      
+      .content-wrapper {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+      
+      .info-sections {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      
+      .profile-header {
+        height: 100px;
+        margin-top: 15px;
+      }
+      
+      .profile-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+        left: 30px;
+      }
+      
+      .user-name {
+        left: 130px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+   <div id="header-placeholder"></div>
+  
+  
+  <div class="profile-header">
+    <button id="logout-btn">Cerrar sesión</button>
+    <div class="profile-icon">
+      👤
+    </div>
+    <div class="user-namei" id="user-namei">
+      Nombre y apellido
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="info-sections">
+        <div class="sidebar-section">
+          <div class="section-title">Información personal</div>
+          <div class="menu-item">Cambiar contraseña</div>
+          <div class="menu-item">Cambiar correo electrónico</div>
+          <div class="menu-item">Cambiar de número</div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-title">Cuenta</div>
+          <div class="menu-item">Editar información</div>
+          <div class="menu-item">Formas de pago</div>
+          <div class="menu-item">Mis pedidos</div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-title">Contactanos</div>
+          <div class="menu-item">Redes sociales</div>
+          <div class="menu-item">Correo electrónico</div>
+          <div class="menu-item">Número de teléfono</div>
+          <div class="menu-item">Ubicación</div>
+        </div>
+      </div>
+
+      <div class="content-area">
+        
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+
+    <script src="Scripts/main.js" type="module"></script>
+</body>
+</html>

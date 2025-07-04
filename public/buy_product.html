@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del producto</title>
+  <link rel="icon" href="imagenes/Logo_campana2.png" type="image/png" />
+  <link rel="stylesheet" href="estilos/estilosMoovo.css"/>
+  <link rel="stylesheet" href="estilos/producto-extras.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42K5S9BYE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D42K5S9BYE');
+</script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <!-- Selector de moneda -->
+
+  
+  <!-- Mensaje de éxito -->
+  <div id="mensaje-exito" class="mensaje-exito">
+    <span class="icono">✓</span>
+    <span class="texto">¡Producto añadido al carrito con éxito!</span>
+    <span class="cerrar" onclick="cerrarMensaje()">×</span>
+  </div>
+    
+  <main class="detalle-producto">
+    <div class="contenedor-producto">
+      <img id="img-producto" src="" alt="Producto">
+             
+      <div class="info-producto">
+        <!-- Calificación -->
+        <div class="calificacion">
+          <div class="estrellas">★★★★☆</div>
+          <span class="resenas">(113 reseñas)</span>
+        </div>
+                 
+        <h1 id="nombre-producto">Productos relacionados</h1>
+        <p id="descripcion-producto">Camiseta blanca de corte clásico, confeccionada en algodón suave y transpirable para máxima comodidad durante todo el día. Presenta un estampado frontal con el logo distintivo de la marca, aportando un estilo moderno y casual. Su diseño de manga corta y cuello redondo la convierte en una prenda versátil, ideal para cualquier ocasión. Disponible en talla L, con ajuste relajado que se adapta fácilmente a diferentes tipos de cuerpo. Perfecta para combinar con jeans, shorts o joggers.</p>
+                 
+        <!-- Fila de Color y Cantidad -->
+        <div class="color-cantidad-row">
+          <div class="opciones-color">
+            <h3>Color:</h3>
+            <div class="colores">
+              <div class="color-opcion verde"></div>
+              <div class="color-opcion azul"></div>
+              <div class="color-opcion rojo"></div>
+              <div class="color-opcion negro"></div>
+            </div>
+          </div>
+                     
+          <div class="cantidad-section">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" min="1" value="1">
+          </div>
+        </div>
+                 
+        <!-- Características del producto -->
+        <div class="caracteristicas">
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_pago_seguro.webp" alt="Entrega garantizada" />
+  </div>
+            <span>Opciones de pago seguro</span>
+          </div>
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_privacidad_datos.webp" alt="Privacidad de datos" />
+  </div>
+            <span>Privacidad de datos</span>
+          </div>
+          <div class="caracteristica">
+            <div class="icono-caracteristica">
+    <img src="imagenes/Icono_entrega_segura.webp" alt="Entrega garantizada" />
+  </div>
+            <span>Entrega garantizada</span>
+          </div>
+        </div>
+        <div class ="selector-moneda-precio-container"> 
+    <div class="selector-moneda">
+    <span class="icono-moneda">💱</span>
+    <select id="selector-moneda">
+      <option value="USD">USD ($)</option>
+      <option value="EUR">EUR (€)</option>
+      <option value="MXN">MXN ($)</option>
+      <option value="COP">COP ($)</option>
+      <option value="ARS">ARS ($)</option>
+      <option value="PEN">PEN (S/)</option>
+      <option value="CLP">CLP ($)</option>
+      <option value="BRL">BRL (R$)</option>
+      <option value="GBP">GBP (£)</option>
+      <option value="JPY">JPY (¥)</option>
+    </select>
+  </div>   
+  <p class="precio"><span id="simbolo-moneda">$</span><span id="precio-producto">5.50</span> <span id="codigo-moneda">USD</span></p>
+        </div>  
+        
+         
+                 
+        <button id="btn-agregar-carrito">Añadir al carrito</button>
+      </div>
+    </div>
+          
+    <section class="relacionados">
+      <h2>Productos relacionados</h2>
+      <div id="carrusel-relacionados" class="carrusel">
+        <!-- Productos relacionados aquí -->
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="Scripts/currency_converter.js" type="module"></script>
+  <script src="Scripts/main.js" type="module"></script>
+  <script type="module" src="Scripts/buy_product.js"></script>
+</body>
+</html>
